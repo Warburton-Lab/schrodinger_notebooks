@@ -10,12 +10,12 @@ Within these code snippets, you can change parameters like particle mass, energy
 If you aren't familiar with Jupyter notebooks, the easiest way to use the ones in this repo is via [GitHub Codespaces](https://github.com/features/codespaces).
 To get started, find this repo on GitHub (if you aren't there already) and click the green button labeled "<> Code" in the upper right area of the page.
 Click the "Codespaces" tab, and then click the "+". (or click your existing Codespace in the list below the "+", if you've already created one for this repo.)
-Doing so will open a new tab in your browser containing an instance of [VSCode](https://code.visualstudio.com) which is connected to a workspace in the cloud.
+Doing so will open a new tab in your browser containing an instance of [VSCode](https://code.visualstudio.com) which is connected to a machine in the cloud.
 This way, you can play with these notebooks on your desktop/laptop machine or tablet without going through the hassle of installing software on your own computer.
 
 An important note: once you're finished using these notebooks, navigate back to this repo on GitHub, click "<> Code" again, select the "Codespaces" tab, find the Codespace you created in the list that appears, click the three dots to the right of it, and select either "Stop Codespace" or "Delete".
 If you don't, your Codespace will continue to run even after you close its tab, and you will quickly burn through the hours of Codespace usage you are allowed each month with a free GitHub account.
-If you click "Stop Codespace", this won't use any more Codespaces hours, but it will use some of your storage since it saves your work so you can come back again later.
+If you click "Stop Codespace", you won't use any more Codespaces hours, but you will use some of your storage since your work is saved so you can come back to it later.
 (Free GitHub accounts only have 15GB of this storage.)
 You can free up this space by selecting "Delete", although you will lose any changes you have made.
 
@@ -37,10 +37,10 @@ python3 -m venv .venv
 
 4. Enter into the virtual environment.
 Once you do this, you should see `(.venv)` appear before the prompt in your command line.
-Its important that you don't skip this step, because otherwise packages will be installed globally which is most likely not what you want.
+Its important that you don't skip this step, because otherwise packages will be installed globally, which is most likely not what you want.
 Enter into the virtual environment using the command:
 ```
-source ./venv/bin/activate
+source ./.venv/bin/activate
 ```
 
 5. Install all necessary packages listed in the `requirements.txt` file.
@@ -52,7 +52,8 @@ pip install -r ./requirements.txt
 
 6. If you're using Codespaces/VSCode, you'll need to install the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and the [Juptyter extension](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) which you can do from the Extensions menu in the menu bar on the left side of the window.
 Then, open the file explorer (also in the menu bar on the left side of the screen) and click on a notebook to open it.
-Once its open, click "Select Kernel" in the upper right corner and then select ".venv" (or whatever you named the file containing your virtual environment) in the menu that appears.
+Once its open, click "Select Kernel" in the upper right corner.
+In the menu that appears, select "Python Environments..." and then select ".venv" (or whatever you named the file containing your virtual environment in Step 4.)
 Then, to execute a cell, click the triangle next to the upper left corner of the cell.
 
 The environment is now set up, and you're ready to use these notebooks.
